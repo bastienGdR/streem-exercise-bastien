@@ -1,0 +1,24 @@
+<form [formGroup]="form" class="form-container">
+    <div class="input-container">
+        <div class="input-area">
+            <label>Keyword</label>
+            <input type="text" name="query" formControlName="query">
+        </div>
+        <div class="input-area">
+            <label>After</label>
+            <input type="date" name="after" formControlName="after">
+        </div>
+        <div class="input-area">
+            <label>Before</label>
+            <input type="date" name="before" formControlName="before">
+        </div>
+        <div class="input-area">
+            <label>Interval (days)</label>
+            <input type="number" name="interval" formControlName="interval">
+        </div>
+    </div>
+    <div class="button-container">
+        <button type="button" (click)="generateChart()">Generate the chart</button>
+        <div *ngIf="isLoading" class="loader"></div>
+    </div>
+</form>

@@ -1,0 +1,6 @@
+<div class="container">
+  <app-searching-area (chartConfig)="search($event)" [isLoading]="isLoading"></app-searching-area>
+  <ng-container *ngIf="!isLoading && showChart">
+    <app-news-graph [news]="newsResults"></app-news-graph>
+  </ng-container>
+</div>
